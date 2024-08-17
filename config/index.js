@@ -1,5 +1,5 @@
 import { defineConfig } from '@tarojs/cli'
-
+import path from 'path'
 import devConfig from './dev'
 import prodConfig from './prod'
 
@@ -17,6 +17,9 @@ export default defineConfig(async (merge, { command, mode }) => {
     },
     sourceRoot: 'src',
     outputRoot: 'dist',
+    alias: {
+      '@': path.resolve(__dirname, '..', 'src'),
+    },
     plugins: [],
     defineConstants: {
     },
@@ -51,6 +54,7 @@ export default defineConfig(async (merge, { command, mode }) => {
     h5: {
       publicPath: '/',
       staticDirectory: 'static',
+      esnextModules: ['taro-ui'],
       output: {
         filename: 'js/[name].[hash:8].js',
         chunkFilename: 'js/[name].[chunkhash:8].js'
