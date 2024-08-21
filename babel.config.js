@@ -15,12 +15,12 @@ module.exports = {
     [
       "import",
       {
-        libraryName: "taro-ui",
-        customName: (name) => `taro-ui/lib/components/${name.slice(3)}`,
-        customStyleName: (name) =>
-          `taro-ui/dist/style/components/${name.slice(3)}.scss`,
+        "libraryName": "@nutui/nutui-react-taro",
+        "libraryDirectory": "dist/esm",
+        "style": 'css',
+        "camel2DashComponentName": false
       },
-      "taro-ui",
-    ],
-  ],
+      'nutui-react-taro'
+    ]
+  ]
 };
