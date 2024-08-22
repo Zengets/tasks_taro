@@ -14,7 +14,10 @@ const CProvider = ({ children, full = false }) => {
     let res = await Taro.getSystemInfo({
       success: (res) => console.log(res),
     });
-    setThemeProvider(theme[res?.theme]);
+    setThemeProvider({
+      theme: res.theme,
+      provide: theme[res?.theme]
+    });
     setStatusBarHeight(full ? 0 : res?.statusBarHeight);
 
     //切换主题
@@ -25,10 +28,10 @@ const CProvider = ({ children, full = false }) => {
 
   return (
     <ConfigProvider
-      theme={themeProvider}
+      theme={themeProvider.provide}
       style={{
         height: `calc(100% - ${statusBarHeight}px)`,
-        backgroundColor: themeProvider.navBgColor,
+        background: themeProvider.theme === 'dark' ? 'linear-gradient(135deg,#414345,#232526)' : 'linear-gradient(135deg,#ece9e6,#ffffff)',
         paddingTop: statusBarHeight,
         overflow: "hidden",
       }}

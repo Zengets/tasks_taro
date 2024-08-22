@@ -1,5 +1,6 @@
 export default defineAppConfig({
   darkmode: true,
+  lazyCodeLoading: 'requiredComponents',
   themeLocation: "theme.json",
   pages: [
     "pages/login/login",
