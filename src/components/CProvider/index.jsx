@@ -5,6 +5,8 @@ import Taro from "@tarojs/taro";
 import theme from "@/theme.json";
 import { useAsyncEffect } from "ahooks";
 
+
+// 应用内置主题
 const config = {
   sizeLg: "24px",
   sizeMd: "16px",
