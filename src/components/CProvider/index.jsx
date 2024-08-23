@@ -1,9 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, cloneElement } from "react";
 import PropTypes from "prop-types";
 import { ConfigProvider } from "@nutui/nutui-react-taro";
 import Taro from "@tarojs/taro";
 import theme from "@/theme.json";
 import { useAsyncEffect } from "ahooks";
+
+const config = {
+  sizeLg: "24px",
+  sizeMd: "16px",
+  sizeSm: "8px",
+  borderRadiusLg: "12px",
+  borderRadiusMd: "8px",
+  borderRadiusSm: "4px",
+  fontSizeLg: "18px",
+  fontSizeMd: "16px",
+  fontSizeSm: "14px",
+  lineHeightLg: "1.5",
+  lineHeightMd: "1.4",
+  lineHeightSm: "1.3",
+  cardShadowLg: "0 4px 8px rgba(0, 0, 0, 0.1)",
+  cardShadowMd: "0 2px 4px rgba(0, 0, 0, 0.1)",
+  cardShadowSm: "0 1px 2px rgba(0, 0, 0, 0.1)",
+};
 
 const CProvider = ({ children, full = false }) => {
   const [themeProvider, setThemeProvider] = useState(theme?.light);
@@ -16,7 +34,7 @@ const CProvider = ({ children, full = false }) => {
     });
     setThemeProvider({
       theme: res.theme,
-      provide: theme[res?.theme]
+      provide: theme[res?.theme],
     });
     setStatusBarHeight(full ? 0 : res?.statusBarHeight);
 
@@ -28,15 +46,18 @@ const CProvider = ({ children, full = false }) => {
 
   return (
     <ConfigProvider
-      theme={themeProvider.provide}
+      theme={{ ...config, ...themeProvider.provide }}
       style={{
         height: `calc(100% - ${statusBarHeight}px)`,
-        background: themeProvider.theme === 'dark' ? 'linear-gradient(135deg,#414345,#232526)' : 'linear-gradient(135deg,#ece9e6,#ffffff)',
+        background:
+          themeProvider.theme === "dark"
+            ? "linear-gradient(135deg,#414345,#232526)"
+            : "linear-gradient(135deg,#ece9e6,#ffffff)",
         paddingTop: statusBarHeight,
         overflow: "hidden",
       }}
     >
-      {children}
+      {cloneElement(children, { ...themeProvider })}
     </ConfigProvider>
   );
 };

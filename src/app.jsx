@@ -5,9 +5,8 @@ import store from './store';
 import { getToken } from './utils/auth';
 import React, { useState, useEffect } from 'react';
 import { useAsyncEffect } from 'ahooks';
+import './assets/iconfont/iconfont.css';
 import './app.less';
-import { View, Text } from '@tarojs/components';
-
 
 
 

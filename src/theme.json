@@ -7,9 +7,18 @@
     "bgColorTop": "#eeeeee",
     "bgColorBottom": "#efefef",
     "tabFontColor": "#000000",
-    "tabSelectedColor": "#3cc51f",
+    "tabSelectedColor": "#fc893c",
     "tabBgColor": "#ffffff",
     "tabBorderStyle": "black",
+
+    "titleColor": "#333333",
+    "subtitleColor": "#666666",
+    "bodyColor": "#444444",
+    "captionColor": "#999999",
+    "cardBgColor": "#FFFFFF",
+
+
+
 
     "nutuiColorPrimary": "#fc893c",
     "nutuiColorPrimaryStop1": "#fc893c",
@@ -23,9 +32,17 @@
     "bgColorTop": "#191919",
     "bgColorBottom": "#1f1f1f",
     "tabFontColor": "#ffffff",
-    "tabSelectedColor": "#51a937",
+    "tabSelectedColor": "#a1f6fb",
     "tabBgColor": "#191919",
     "tabBorderStyle": "white",
+    
+
+    "titleColor": "#FFFFFF",
+    "subtitleColor": "#DDDDDD",
+    "bodyColor": "#CCCCCC",
+    "captionColor": "#AAAAAA",
+    "cardBgColor": "#2A2A2A",
+
 
     "nutuiColorPrimary": "#a1f6fb",
     "nutuiColorPrimaryStop1": "#a1f6fb",
