@@ -7,7 +7,6 @@ import './login.less';
 
 
 const Login = () => {
-  const marginStyle = { margin: 8 }
 
 
   return (
