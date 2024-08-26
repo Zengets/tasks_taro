@@ -12,16 +12,25 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap:var(--size-md);
+  gap:var(--size-sm);
   margin:var(--size-lg) 0;
 }
 
 .title{
-  font-size: var(--size-lg);
+  font-size: var(--size-md);
   // tabBorderStyle
   // color: var(--tab-bg-color);
 }
 .fixbottom{
   position: fixed;
-  bottom: 36px;
+  border-radius: var(--size-lg);
+  bottom: var(--size-lg);
+  font-size: var(--size-sm);
+  background-color: var(--nutui-color-primary);
+  color: aliceblue;
+  &::after{
+    border-radius: var(--size-lg);
+    overflow: hidden;
+    border: none !important;
+  }
 }

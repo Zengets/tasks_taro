@@ -28,9 +28,17 @@ const Login = () => {
             <Input placeholder='密码' style={{ backgroundColor: "transparent" }}></Input>
           </View>
         </View>
-        <Button type="primary" size='large' >登录{APPURL}</Button>
+        <Button type="primary" size='large' >登录</Button>
 
-        <TButton  size='large' className='fixbottom' >获取手机号</TButton>
+        <TButton
+          className='fixbottom'
+          openType='getPhoneNumber'
+          onGetPhoneNumber={(res) => {
+            console.log('====================================');
+            console.log(res);
+            console.log('====================================');
+
+          }}>获取手机号</TButton>
       </View>
     </CProvider>
   )
