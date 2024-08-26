@@ -8,9 +8,11 @@ import { useAsyncEffect } from "ahooks";
 
 // 应用内置主题
 const config = {
-  sizeLg: "24px",
-  sizeMd: "16px",
-  sizeSm: "8px",
+  sizeXl: '48px',
+  sizeLg: "27px",
+  sizeMd: "24px",
+  sizeSm: "16px",
+  size:'12px',
   borderRadiusLg: "12px",
   borderRadiusMd: "8px",
   borderRadiusSm: "4px",
@@ -39,7 +41,6 @@ const CProvider = ({ children, full = false }) => {
       provide: theme[res?.theme],
     });
     setStatusBarHeight(full ? 0 : res?.statusBarHeight);
-
     //切换主题
     Taro.onThemeChange((res) => {
       setThemeProvider(theme[res]);
