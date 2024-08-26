@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { Button, Input } from '@nutui/nutui-react-taro'
 import { View, Text } from '@tarojs/components';
 import CProvider from '@/components/CProvider';
@@ -10,6 +10,30 @@ import './login.less';
 
 
 const Login = () => {
+
+
+  useEffect(() => {
+    Taro.login({
+      success: function (res) {
+        console.log('====================================');
+        console.log(res?.code);
+        console.log('====================================');
+        // if (res.code) {
+        //   //发起网络请求
+        //   Taro.request({
+        //     url: 'https://test.com/onLogin',
+        //     data: {
+        //       code: res.code
+        //     }
+        //   })
+        // } else {
+        //   console.log('登录失败！' + res.errMsg)
+        // }
+      }
+    })
+
+
+  }, []);
 
 
   return (

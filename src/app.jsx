@@ -15,7 +15,7 @@ function App({ children }) {
 
   useAsyncEffect(async () => {
     const token = getToken();
-    if (token) {
+    if (!token) {
       // 如果存在 token，跳转到 Tab 页 相当于PC的layout
       switchTab({ url: '/pages/home/home' });
     } else {
