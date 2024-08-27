@@ -10,6 +10,7 @@ export default defineAppConfig({
     "pages/mine/mine",
   ],
   tabBar: {
+    custom: true,
     color: "@tabFontColor",
     selectedColor: "@tabSelectedColor",
     backgroundColor: "@tabBgColor",

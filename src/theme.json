@@ -18,8 +18,6 @@
     "cardBgColor": "#FFFFFF",
 
 
-
-
     "nutuiColorPrimary": "#fc893c",
     "nutuiColorPrimaryStop1": "#fc893c",
     "nutuiColorPrimaryStop2": "#fc893c"
@@ -35,7 +33,7 @@
     "tabSelectedColor": "#a1f6fb",
     "tabBgColor": "#191919",
     "tabBorderStyle": "white",
-    
+
 
     "titleColor": "#FFFFFF",
     "subtitleColor": "#DDDDDD",

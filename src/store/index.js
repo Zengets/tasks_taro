@@ -2,7 +2,11 @@ import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 // 定义初始状态
 const initialState = {
-  data: { count: 0, text: '' },
+  data: {
+    count: 0,
+    text: '',
+    selected:'/pages/home/home'
+  },
 };
 
 // 使用 createSlice 创建 slice
